@@ -1,69 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/card"
+    android:layout_height="wrap_content"
+
     android:layout_marginTop="10dp"
-    android:layout_height="wrap_content">
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:id="@+id/card"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_height="130dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_alignParentStart="true"
+            android:id="@+id/word_text_view"
+            android:layout_toStartOf="@+id/meaning_text_view"
+            android:maxLines="1"
+            />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:text="Book"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="كتاب"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/meaning_text_view"
+            />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="كتاب"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.916"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:text="noun"
-                android:textSize="18dp"
-
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noun"
+            android:id="@+id/type_text_view"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/word_text_view"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -64,9 +64,9 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewDataHolder
 
         public ViewDataHolder(@NonNull View itemView) {
             super(itemView);
-            bookname = itemView.findViewById(R.id.textView);
-            bookMeaning = itemView.findViewById(R.id.textView2);
-            type = itemView.findViewById(R.id.textView3);
+            bookname = itemView.findViewById(R.id.word_text_view);
+            bookMeaning = itemView.findViewById(R.id.meaning_text_view);
+            type = itemView.findViewById(R.id.type_text_view);
             cardView = itemView.findViewById(R.id.card);
 
 

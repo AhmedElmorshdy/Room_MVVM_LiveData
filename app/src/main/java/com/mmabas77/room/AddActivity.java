@@ -40,7 +40,7 @@ public class AddActivity extends AppCompatActivity {
         if (i.hasExtra(EXTRA_ID)){
             setTitle("update Activity");
             editMode=true;
-            i.getIntExtra(EXTRA_ID,-1);
+           mID = i.getIntExtra(EXTRA_ID,-1);
             wordEditText.setText(i.getStringExtra(EXTRA_WORD).toString());
             meaningEditText.setText(i.getStringExtra(EXTRA_MEANING));
             typeEditText.setText(i.getStringExtra(EXTRA_TYPE));
@@ -84,6 +84,7 @@ public class AddActivity extends AppCompatActivity {
         }
 
         if(editMode){
+            wordObject.setId(mID);
             Toast.makeText(AddActivity.this, "please fill all fields", Toast.LENGTH_LONG).show();
             addNewWordViewModel.updateWord(wordObject);
         }else{
